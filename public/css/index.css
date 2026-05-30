@@ -18,6 +18,14 @@ main{
     flex-direction: column;
     flex: 1;
 }
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+}
+
 h1{
     color: #ffffff;
     font-family: arial, sans-serif;
@@ -42,7 +50,7 @@ top-bar{
     padding: 30px;
     height: 70px;
     gap: 10px;
-    background-color: blue;
+    border-bottom: 1px solid #d6d6d6;
 }
 table{
     border-spacing: 0;
@@ -74,6 +82,54 @@ button{
     background-color: #112240;
     border: 0;
     border-radius: 10px;
+}
+.blue_background{
+    background-color: #cfe2ff;
+}
+.green_background{
+    background-color: #d1e7dd;
+}
+.yellow_background{
+    background-color: #fff3cd;
+}
+.purple_background{
+    background-color: #c36cf7;
+}
+.border_round{
+    border: 1px solid rgb(0,0,0,0.1);
+    border-radius: 10px;
+}
+.margin_10px{
+    margin: 10px;
+}
+.flex_all_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box_paint{
+    padding: 10px;
+}
+.content_card{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.card{
+    display: grid;
+    height: 100%;
+    width: 24%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid #d6d6d6;
+}
+.iconos-card{
+    height: 100%;
+}
+.row_span2{
+    grid-row: span 2;
 }
 .admin_text{
     font-size: 14px;
@@ -108,11 +164,4 @@ button{
 .botones:hover .iconos-menu{
     transition: 0.25s;
     filter: brightness(2);
-}
-nav{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    height: 100%;
 }
