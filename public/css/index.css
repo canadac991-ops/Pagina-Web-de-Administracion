@@ -13,19 +13,79 @@ aside{
     padding: 40px;
     padding-top: 10px;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+h1{
+    color: #ffffff;
+    font-family: arial, sans-serif;
+    user-select: none;
+    
+}
+h2{
+    color: black;
+    font-size: 35px;
+    font-family: arial, sans-serif;
+    margin: 15px 0 0 5px;
+    padding-left: 15px;
+}
+p{
+    font-family: arial, sans-serif;
+    user-select: none;
+}
+top-bar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px;
+    height: 70px;
+    gap: 10px;
+    background-color: blue;
+}
+table{
+    border-spacing: 0;
+    border-collapse:collapse;
+    margin-left: 75px;
+    width: 80%;
+}
+td:not(:last-child){
+    border-right: 1px solid black;
+}
+td, th{
+    font-family: arial, sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
 button{
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: end;
+    padding-bottom: 20px;
+    transition: 0.25s;
+    user-select: none;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    color: #94a3b8;
     height: 50px;
     width: 120%;
+    background-color: #112240;
     border: 0;
     border-radius: 10px;
-    transition: 0.25s;
-    background-color: #112240;
-    color: #94a3b8;
+}
+.admin_text{
+    font-size: 14px;
+    font-weight: 600;
+}
+.padding_left{
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.top_bar_icon{
+    height: 30px;
 }
 .botones{
     gap: 10px;
@@ -40,7 +100,14 @@ button{
 }
 .botones.active .iconos-menu{
     transition: 0.25s;
-    filter: brightness(0) invert(1);
+    filter: brightness(2);
+}
+.iconos-menu{
+    height: 20px;
+}
+.botones:hover .iconos-menu{
+    transition: 0.25s;
+    filter: brightness(2);
 }
 nav{
     display: flex;
@@ -48,11 +115,4 @@ nav{
     gap: 10px;
     align-items: center;
     height: 100%;
-}
-h1{
-    color: #ffffff;
-    font-family: arial, sans-serif;
-}
-.iconos-menu{
-    height: 50%;
 }
