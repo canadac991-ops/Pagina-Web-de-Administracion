@@ -13,26 +13,34 @@ aside{
     padding: 40px;
     padding-top: 10px;
 }
-option{
-
-}
 button{
     display: flex;
     justify-content: start;
     align-items: center;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     height: 50px;
     width: 120%;
     border: 0;
     border-radius: 10px;
+    transition: 0.25s;
     background-color: #112240;
     color: #94a3b8;
+}
+.botones{
+    gap: 10px;
+}.botones:hover{
+    background-color: #1d3557;
+    color: white;
 }
 .botones.active{
     transition: 0.25s;
     background-color: #0284c7;
     color: white;
+}
+.botones.active .iconos-menu{
+    transition: 0.25s;
+    filter: brightness(0) invert(1);
 }
 nav{
     display: flex;
@@ -44,4 +52,7 @@ nav{
 h1{
     color: #ffffff;
     font-family: arial, sans-serif;
+}
+.iconos-menu{
+    height: 50%;
 }

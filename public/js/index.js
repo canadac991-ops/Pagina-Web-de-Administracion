@@ -3,6 +3,14 @@ const botones = document.querySelectorAll(".botones")
 botones.forEach((boton) =>{
     
     boton.addEventListener("click", () => {
-        boton.classList.add(".active");
+
+        botones.forEach((remove) =>{
+            if (remove != boton){
+            remove.classList.remove("active");
+            }
+        });
+
+        boton.classList.add("active");
+
     })
 });
