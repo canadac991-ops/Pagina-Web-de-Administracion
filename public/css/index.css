@@ -63,8 +63,8 @@ top-bar{
 table{
     border-spacing: 0;
     border-collapse:collapse;
-    margin-left: 75px;
-    width: 80%;
+    margin-left: 30px;
+    width: 90%;
 }
 td:not(:last-child){
     border-right: 1px solid black;
@@ -96,6 +96,9 @@ button{
     background-color: #112240;
     border: 0;
     border-radius: 10px;
+}
+.border_top{
+    border-top: 1px solid rgba(100, 100, 150, 0.25);
 }
 .no_margin_padding{
     margin:0;
@@ -131,14 +134,14 @@ button{
     background-color: #fff3cd;
 }
 .purple_background{
-    background-color: #c36cf7;
+    background-color: #e7dbee;
 }
 .border_round{
     border: 1px solid rgba(250, 250, 250, 0.1);
     border-radius: 10px;
 }
-.margin_10px{
-    margin: 10px;
+.margin_12px{
+    margin: 12px;
 }
 .flex_all_center{
     display: flex;
@@ -156,19 +159,20 @@ button{
     align-items: center;
 }
 .box_paint{
-    padding: 10px;
+    padding: 20px;
 }
 .content_card{
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    margin-left: 30px;
     height: 150px;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 25px;
+    margin-bottom: 80px;
 }
 .card{
     display: grid;
     height: 100%;
-    width: 24%;
+    width: 22%;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
