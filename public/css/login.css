@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    font-size: 15px;
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+#box_content{
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+#imagen{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 45%;
+    padding: 20px;
+}
+#login_box{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    height: 100%;
+    width: 55%;
+    padding: 80px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+#box_titulo{
+    display: flex;
+    flex-direction: column;
+}
+#titulo_texto{
+    font-size: 35px;
+    margin: 0;
+    font-weight: 600;
+    font-family: arial, sans-serif;
+}
+#titulo_desc{
+    font-size: 15px;
+    font-family: arial, sans-serif;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input_imagen{
+    display: flex;
+    height: 45px;
+    justify-content: end;
+    align-items: center;
+}
+#boton_ingresar{
+    transition: 0.2s;
+    grid-row: 4;
+    background-color: #0284c7;
+    border: 4px solid #69adcf;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-family: arial, sans-serif;
+    font-size: 30px;
+}
+#boton_ingresar:hover{
+    transition: 0.2s;
+    transform: scale(1.05);
+}
+#boton_ingresar:active{
+    transition: 0.15s;
+    transform: scale(0.95);
+}
+#input_nombre{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 25px;
+    height: 35px;
+    padding-left: 10px;
+}
+#input_password{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 25px;
+    height: 35px;
+    padding-left: 10px;
+}
+#input_nombre:focus,
+#input_password:focus{
+    outline: none;
+}
+.imagen{
+    display: flex;
+    height: 40px;
+    margin-right: 15px;
+    border: 1px solid (0, 0, 0, 0.2);
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+#imagen{
+    background: linear-gradient(45deg,#cbebfd, #daf0fd);
+    padding: 0;
+    margin: 0;
+    border-start-start-radius: 20px;
+    border-end-start-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+}
+#sombrero{
+    height: 100px;
+    width: 110px;
+}
+#imagen_prentacion{
+    margin-top: 60px;
+    width: 100%;
+}

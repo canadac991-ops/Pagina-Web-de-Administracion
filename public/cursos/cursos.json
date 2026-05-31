@@ -1,0 +1,7 @@
+[
+    {
+        "nombre":"Fundamentos del diseño interactivo",
+        "estudiantes":["kevin", "matias"],
+        "horario":["vacio", "10 am", "10 am", "vacio", "vacio", "vacio", "vacio"]
+    }
+]
