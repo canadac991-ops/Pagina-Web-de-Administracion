@@ -33,9 +33,10 @@ app.post('/login'), (rez, res) => {
     const docente = fs.readFileSync("public/docentes/docentesjson","utf8")
     const estudiante = fs.readFileSync("public/estudiantes/estudiantes.json","utf8")
 
+    //const administrador = parse.JSON
 
 
-    const nombre_comprobante = 
+    const nombre_comprobante =  parse
     const contraseña_comprobante = 
 
 

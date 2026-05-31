@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nombre": "Fern",
+        "rol": "admin"
+    },
+    {
+        "id": 2,
+        "nombre": "Juan",
+        "rol": "docente"
+    },
+    {
+        "id": 3,
+        "nombre": "Elar",
+        "rol": "estudiante"
+    }
+]
