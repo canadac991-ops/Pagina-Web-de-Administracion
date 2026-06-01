@@ -80,8 +80,7 @@ th{
 td{
     border-bottom: 1px solid #d6d6d6;
 }
-
-button{
+.boton_menu{
     display: flex;
     justify-content: start;
     align-items: end;
@@ -96,6 +95,66 @@ button{
     background-color: #112240;
     border: 0;
     border-radius: 10px;
+}
+#barra_de_accion{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.boton_verde{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 20px;
+    transition: 0.25s;
+    user-select: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    height: 50px;
+    width: 100px;
+    background-color: #003fac;
+    border: 0;
+    border-radius: 10px;
+    text-shadow: 1px 1px 10px black;
+}
+.boton_azul{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 20px;
+    transition: 0.25s;
+    user-select: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    height: 50px;
+    width: 100px;
+    background-color: #003fac;
+    border: 0;
+    border-radius: 10px;
+    text-shadow: 1px 1px 10px black;
+}
+.boton_rojo{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 20px;
+    transition: 0.25s;
+    user-select: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    height: 50px;
+    width: 100px;
+    background-color: #003fac;
+    border: 0;
+    border-radius: 10px;
+    text-shadow: 1px 1px 10px black;
 }
 .border_top{
     border-top: 1px solid rgba(100, 100, 150, 0.25);

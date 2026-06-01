@@ -2,16 +2,19 @@
     {
         "id": 1,
         "nombre": "Fern",
+        "password": "admin",
         "rol": "admin"
     },
     {
         "id": 2,
         "nombre": "Juan",
+        "password": "docente",
         "rol": "docente"
     },
     {
         "id": 3,
         "nombre": "Elar",
+        "password": "estudiante",
         "rol": "estudiante"
     }
 ]

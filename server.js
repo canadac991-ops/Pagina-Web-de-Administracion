@@ -17,96 +17,121 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")))
 app.use(cookieParser());
 
-const login = fs.readFileSync("public/paginas/login.html","utf8");
-const principal = fs.readFileSync("public/paginas/principal.html","utf8");
 
-let index;
+
+
 
 app.get('/', (req, res) => {
-res.send(login);    
+    index = fs.readFileSync("public/paginas/login.html", "utf8")
+    res.send(index);    
 })
 
-app.post('/login'), (rez, res) => {
+
+
+app.post('/login', (req, res) => {
     const {nombre, contraseña} = req.body;
-    
-    const administrador = fs.readFileSync("public/administrador/administrador.json","utf8")
-    const docente = fs.readFileSync("public/docentes/docentesjson","utf8")
-    const estudiante = fs.readFileSync("public/estudiantes/estudiantes.json","utf8")
 
-    //const administrador = parse.JSON
-
-
-    const nombre_comprobante =  parse
-    const contraseña_comprobante = 
-
-
-
-
-        if(nombre === "admin" && contraseña === "1234"){
-            const token = jwt.sign(
-                { usuario: nombre},
-                process.env.JWT_SECRET,
-                { expiresIn: "6h"}
-            );
-        
-            res.cookie("token", token);
-            res.json({
-                ok: true
-            });
-    
-        }
-        else {
-            res.json({
-                ok:false
-            });
-        }
+    const usuarios = JSON.parse(fs.readFileSync("public/entidades/usuarios.json", "utf8"));
+    const usuario = usuarios.find(
+        u => u.nombre === nombre
+    );
+    console.log(nombre);
+    console.log(usuario);
+    if(!usuario){
+    return res.send({
+        error: "Usuario no encontrado"
+    });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.get('/administrador', (req, res) => {
-    try{
-    //const token = req.cookies.token;
-    //jwt.verify(token, process.env.JWT_SECRET);
+    if(usuario.password === contraseña){
+        const token = jwt.sign(
+            {   id: usuario.id,
+                rol: usuario.rol
+            },
+            process.env.JWT_SECRET,
+            { expiresIn: "4h"}
+        );
     
-    const contenido = fs.readFileSync("public/paginas/administrador/inicio.html", "utf8");
-    
-    const final = principal.replace("{{CONTENIDO}}", contenido);
-
-    res.send(final);
-}
-    catch(error){
+        res.cookie("token", token);
+        res.json({
+            rol: usuario.rol,
+            success: true
+        });
 
     }
-        res.send({})
+    else {
+        res.json({
+            success:false
+        });
+    }
+})
+
+app.get('/admin', (req, res) => {
+    try{
+    const datos = jwt.verify(
+        req.cookies.token,
+        process.env.JWT_SECRET
+    )
+    const admin = fs.readFileSync("public/paginas/admin.html", "utf8")
+    const replace = fs.readFileSync("public/paginas/admin/inicio.html", "utf8")
+    const final = admin.replace("{{CONTENIDO}}", replace);
+    res.send(final);
+    }
+    catch(error){
+        res.redirect("/");
+    }
+})
+
+app.get('/docente', (req, res) => {
+    try{
+    const datos = jwt.verify(
+        req.cookies.token,
+        process.env.JWT_SECRET
+    )
+    const docente = fs.readFileSync("public/paginas/docente.html", "utf8")
+    const replace = fs.readFileSync("public/paginas/admin/inicio.html", "utf8")
+    const final = docente.replace("{{CONTENIDO}}", replace);
+    res.send(final);
+    }
+    catch(error){
+        res.redirect("/");
+    }
+})
+
+app.get('/estudiante', (req, res) => {
+    try{
+    const datos = jwt.verify(
+        req.cookies.token,
+        process.env.JWT_SECRET
+    )
+    const estudiante = fs.readFileSync("public/paginas/estudiante.html", "utf8")
+    const replace = fs.readFileSync("public/paginas/admin/inicio.html", "utf8")
+    const final = estudiante.replace("{{CONTENIDO}}", replace);
+    res.send(final);
+    }
+    catch(error){
+        res.redirect("/");
+    }
 })
 
 
 
-app.get('/administracion', (req, res) => {
+
+
+
+
+
+
+
+
+
+app.get('/dashboard', (req, res) => {
     try{
     const token = req.cookies.token;
     jwt.verify(token, process.env.JWT_SECRET);
 
     contenido = fs.readFileSync(
-    "public/paginas/administracion.html",
+    "datos/reservas.json",
     "utf8"
     );
     reservaciones = JSON.parse(contenido);
