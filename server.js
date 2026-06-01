@@ -39,7 +39,8 @@ app.post('/login', (req, res) => {
     console.log(usuario);
     if(!usuario){
     return res.send({
-        error: "Usuario no encontrado"
+        error: "usuario incorrecto",
+        success: false
     });
 }
 
@@ -61,6 +62,7 @@ app.post('/login', (req, res) => {
     }
     else {
         res.json({
+            error: "contraseña incorrecta",
             success:false
         });
     }

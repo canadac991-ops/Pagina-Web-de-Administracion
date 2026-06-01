@@ -20,25 +20,22 @@
 
 
     <main>
-        <top-bar>
-            <img class="top_bar_icon" src="../iconos/bell-regular.png">
-            <p class="admin_text">Administrador</p>
-        </top-bar>
-            <h2>Horarios</h2>
-            <p class="padding_left">Lista</p>
-        <div id="barra_de_accion"><button class="boton_azul" type="button">editar</button></div>
-        <table>
-            <thead>
-                <tr>
-                    <th>CURSOS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                </tr>
-            </tbody>
-        </table>
+        {{CONTENIDO}}
     </main>
+    <div id="modal">
+        <div id="ventana">
+            <div id="caja_boton_cerrar"><button id="boton_cerrar" type="button">X</button></div>
+            <div class="input_window_nombre">
+                <label>Nombre</label>
+                <input id="input_nombre" type="text">
+            </div>
+            <div class="input_window_contraseña">
+                <label>Contraseña</label>
+                <input id="input_contraseña" type="text">
+            </div>
+            <div id="caja_boton_agregar"><button id="boton_agregar" type="button">Crear</button></div>
+        </div>
+    </div>
 </body>
 <script src="../js/admin.js"></script>
 </html>

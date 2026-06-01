@@ -25,6 +25,9 @@ nav{
     align-items: center;
     height: 80%;
 }
+label{
+    font-family: arial, sans-serif;
+}
 
 h1{
     color: #ffffff;
@@ -79,6 +82,92 @@ th{
 }
 td{
     border-bottom: 1px solid #d6d6d6;
+}
+#modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#ventana{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+#input_nombre,
+#input_contraseña{
+    font-size: 18px;
+    height: 30px;
+    width: 180px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#caja_boton_agregar{
+    display: flex;
+    grid-row: 5;
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#boton_agregar{
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    height: 60px;
+    width: 150px;
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 15px;
+}
+#caja_boton_cerrar{
+    display: flex;
+    grid-row: 1;
+    grid-column: 2;
+    height: 70%;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
+#boton_cerrar{
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    height: 35px;
+    width: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: #cfe2ff;
+
+    margin-right: 20px;
+}
+.input_window_nombre{
+    display: flex;
+    grid-row: 2;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 50px;
+    padding-top: 0;
+}
+.input_window_contraseña{
+    display: flex;
+    grid-row: 2;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 50px;
+    padding-top: 0;
 }
 .boton_menu{
     display: flex;
